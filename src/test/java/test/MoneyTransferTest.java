@@ -85,8 +85,8 @@ public class MoneyTransferTest {
     @Test
     void moreThanPossible() {
         int actual1 = dashboardPage.topUpCard2().deposit(15_000, DataHelper.card1Number()).getCard2Balance();
-        Assertions.assertEquals(25_000, actual1);
+        Assertions.assertEquals(10_000, actual1);
         int actual2 = dashboardPage.getCard1Balance();
-        Assertions.assertEquals(-5_000, actual2);
+        Assertions.assertEquals(10_000, actual2);
     }
 }
